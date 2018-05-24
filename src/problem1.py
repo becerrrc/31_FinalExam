@@ -173,9 +173,10 @@ def problem1b(numbers):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     third = 0
-    for k in range((len(numbers)//2)):
-        third = third + numbers[k]+1
+    for k in range(((len(numbers))//2)):
+        third = third + numbers[k]
     return third
+
 
 
 ###############################################################################
