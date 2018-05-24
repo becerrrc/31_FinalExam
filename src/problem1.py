@@ -19,7 +19,7 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    #run_test_problem1a()
+    run_test_problem1a()
     run_test_problem1b()
 
 
@@ -173,7 +173,7 @@ def problem1b(numbers):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     third = 0
-    for k in range(len(numbers)//2):
+    for k in range((len(numbers)//2)):
         third = third + numbers[k]+1
     return third
 
