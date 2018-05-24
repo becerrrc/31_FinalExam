@@ -172,7 +172,9 @@ def problem1b(numbers):
     # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    third = numbers[len(numbers)//2]
+    third = 0
+    for k in range(len(numbers)//2):
+        third = third + numbers[k]+1
     return third
 
 

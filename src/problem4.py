@@ -28,6 +28,12 @@ def main():
     #     -- Construct two Pig objects
     #     -- Call each method that you implement below.
     # -------------------------------------------------------------------------
+    pig = Pig(200)
+    print('Pigs weight = ', pig.get_weight())
+    print('Weight after slop = ',pig.eat(0))
+    print('Weight after a year = ',pig.eat_for_a_year(365))
+    print('Heavier pig= ', pig.heavier_pig(67000))
+    print('New Pig= ', pig.new_pig(67000))
 
 
 class Pig(object):
@@ -36,19 +42,24 @@ class Pig(object):
         What comes in:  The Pig's weight (in pounds).
         Side effects: Sets instance variables as needed by the other methods.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        self.weight = weight
 
     def get_weight(self):
         """ Returns this Pig's weight. """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        return self.weight
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
 
-    def eat_for_a_year(self):
+        self.weight = self.weight + pounds_of_slop
+        return self.weight
+
+    def eat_for_a_year(self,n):
         """
         Calls the   eat   method as many times as needed to make this Pig:
           -- eat 1 pound of slop, then
@@ -58,22 +69,33 @@ class Pig(object):
           -- eat 364 pounds of slop, then
           -- eat 365 pounds of slop.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        for k in range(1,n):
+            x = self.eat(k)
+        return x
+
 
     def heavier_pig(self, other_pig):
         """
         Returns either this Pig object or the other given Pig object,
         whichever is heavier.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        self.other_pig = other_pig
+        if self.other_pig > self.weight:
+            return self.other_pig
+        else:
+            return self.weight
+
 
     def new_pig(self, other_pig):
         """
         Returns a new Pig whose weight is the weight of the heavier
           of this Pig and the other_Pig.
         """
-        # TODO: Implement and test this method.
-
+        # DONE: Implement and test this method.
+        self.other_pig = other_pig
+        return self.other_pig
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

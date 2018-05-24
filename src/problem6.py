@@ -2,8 +2,8 @@
 Final exam, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Raymond Becerra.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -75,7 +75,7 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: Implement and test this function.
+    # DONE: Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In solving this problem,
@@ -87,6 +87,24 @@ And this one for n=14:
     #   print Xs for the spaces until you figure out where the problem is
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
+    # space = ' '
+    # #new_str = '*'
+    # for k in range(1, n + 1):
+    #     print((n - k) * space, end='')
+    #     for j in range(k):
+    #         print(j + 1, end='')
+    #     print()
+    for k in range(n):
+        num = ''
+        new_str = '**'
+        space = ''
+        for j in range(k):
+            space = space + ' '
+        for a in range(n-k):
+            num = num + str(a+1)
+        for i in range(len(num)):
+            new_str = new_str + num[len(num)-(i+1)]
+        print(space + num + new_str)
 
 
 # ----------------------------------------------------------------------
